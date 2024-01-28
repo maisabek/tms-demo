@@ -4,12 +4,11 @@
 <head>
     <base href="../../../">
     <meta charset="utf-8" />
-    <title>Ckeditor</title>
-    <meta name="description" content="ckeditor examples" />
+    <title>Studio</title>
+    <meta name="description" content="Wizard examples" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="canonical" href="https://keenthemes.com/metronic" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
-
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
@@ -25,6 +24,7 @@
     class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
 
     <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
+        <!--begin::Logo-->
         <a href="index.html">
             <img alt="Logo" src="assets/media/logos/logo-light.png" />
         </a>
@@ -33,8 +33,6 @@
             <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
                 <span></span>
             </button>
-
-
 
         </div>
     </div>
@@ -76,6 +74,7 @@
                                 <h4 class="menu-text">Custom</h4>
                                 <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                             </li>
+
 
                             <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                                 <a href="javascript:;" class="menu-link menu-toggle">
@@ -123,14 +122,16 @@
                                                 <span class="menu-text">studio</span>
                                             </a>
                                         </li>
+
                                         <li class="menu-item" aria-haspopup="true">
-											<a href="custom/pages/plugins/datatable.html" class="menu-link">
-												<i class="menu-bullet menu-bullet-dot">
-													<span></span>
-												</i>
-												<span class="menu-text">datatable</span>
-											</a>
-										</li>
+                                            <a href="custom/pages/plugins/datatable.html" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="menu-text">datatable</span>
+                                            </a>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </li>
@@ -148,11 +149,12 @@
                             <div id="kt_header_menu" class="header-menu header-menu-mobile header-menu-layout-default">
                                 <div
                                     class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+                                    <!--begin::Info-->
                                     <div class="d-flex align-items-center flex-wrap mr-1">
                                         <!--begin::Page Heading-->
                                         <div class="d-flex align-items-baseline flex-wrap mr-5">
                                             <!--begin::Page Title-->
-                                            <h5 class="text-dark font-weight-bold my-1 mr-5">ckeditor </h5>
+                                            <h5 class="text-dark font-weight-bold my-1 mr-5">datatable </h5>
                                             <!--end::Page Title-->
                                             <!--begin::Breadcrumb-->
                                             <ul
@@ -161,7 +163,7 @@
                                                     <a href="" class="text-muted">plugins</a>
                                                 </li>
                                                 <li class="breadcrumb-item text-muted">
-                                                    <a href="" class="text-muted">ckeditor</a>
+                                                    <a href="" class="text-muted">datatable</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -176,6 +178,7 @@
 
                 <div class="content d-flex flex-column flex-column-fluid p-0" id="kt_content">
 
+
                     <div class="d-flex flex-column-fluid">
                         <div class="container">
                             <div class="card card-custom">
@@ -183,7 +186,8 @@
                                     <div class="example mb-10">
                                         <p>Default examples.</p>
                                         <div class="example-preview">
-                                            <img src="assets/media/plugin/ckeditor.png" class="w-100" alt="ckeditor image">
+                                            <img src="assets/media/plugin/datatable.png" class="w-100"
+                                                alt="datatable image">
                                         </div>
                                         <div class="example-code">
                                             <span class="example-copy" data-toggle="tooltip" title=""
@@ -191,17 +195,36 @@
                                             <div class="example-highlight">
                                                 <pre class=" language-html">
                                                 <code class="language-html">
-                                                    @include('common.ckeditor.ckeditor', [
-                                                    'id' => 'ckeditorId',
-                                                    'name'=>'ckeditorName',
-                                                    'value' => ckeditorValueFromBackend,
-                                                    'form' => 'ckeditorFormName',
-                                                    'blurCallback' => 'CkEditorBlurFn',
-                                                    'focusCallback' => 'EditorFocusFn',
-                                                    'push' => true,
-                                                    'LabelText' => 'label Name',
-                                                    'includeSourceFiles' => true
+                                                &lt;table id="ajax-datatables" class="table course-table" width="100%"&gt;<br>
+                                                  &lt;thead&gt;<br>
+                                                    &lt;tr&gt;<br>
+                                                    &lt;th class="th-sm"&gt;column Name&lt;/th&gt;<br>
+                                                    &lt;th class="th-sm"&gt;column Name&lt;/th&gt;<br>
+                                                    &lt;th class="th-sm"&gt;column Name&lt;/th&gt;<br>
+                                                    &lt;/tr&gt;<br>
+                                                  &lt;/thead&gt;<br>
+                                                  &lt;tbody&gt;<br>
+                                                  &lt;/tbody&gt;<br>
+                                                &lt;/table&gt;<br>
+                                                
+                                                @php<br>
+                                                $columns = [
+                                                ['data'=> 'columnData','name'=>'columnName'],
+                                                ['data'=> 'columnData','name'=>'columnName'],
+                                                ['data'=>'action','name'=>'action']
+                                                ];
+                                                @endphp
+                                                
+                                                @include('General/Datatable/ajaxdatatables',[
+                                                'searching'=>true,
+                                                'url'=> \LaravelLocalization::localizeURL(route('Replace with route'))  ,
+                                                'method'=>'GET','columns'=>$columns,
+                                                'zeroRecords' => 'message when no data exist',
+                                                'columns' => $columns,
+                                                'tableId' => 'ajax-datatables',
+                                                'responsive' => false
                                                 ])
+                                                
                                                 </code>
                                             </pre>
                                             </div>
@@ -218,15 +241,18 @@
                         class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
                         <div class="text-dark order-2 order-md-1">
                             <span class="text-muted font-weight-bold mr-2">2024©Mai</span>
+
                         </div>
 
                         <div class="nav nav-dark">
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <script src="assets/plugins/global/plugins.bundle.js"></script>
     <script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>

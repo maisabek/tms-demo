@@ -115,7 +115,14 @@
 												<span class="menu-text">studio</span>
 											</a>
 										</li>
-							
+                                        <li class="menu-item" aria-haspopup="true">
+											<a href="custom/pages/plugins/datatable.html" class="menu-link">
+												<i class="menu-bullet menu-bullet-dot">
+													<span></span>
+												</i>
+												<span class="menu-text">datatable</span>
+											</a>
+										</li>
 									</ul>
 								</div>
 							</li>
@@ -166,7 +173,30 @@
                         <div class="container">
                             <div class="card card-custom">
                                 <div class="card-body p-5">
-                                    <h5>studio</h5>
+                                    <div class="example mb-10">
+                                        <p>Default examples.</p>
+                                        <div class="example-preview">
+                                            <img src="assets/media/plugin/studio.png" class="w-100" alt="ckeditor image">
+                                        </div>
+                                        <div class="example-code">
+                                            <span class="example-copy" data-toggle="tooltip" title=""
+                                                data-original-title="Copy code"></span>
+                                            <div class="example-highlight">
+                                                <pre class=" language-html">
+                                                <code class="language-html">
+                                                    @include('General.designer.designer', [
+                                                    'domId' => 'designerId',
+                                                    'saveRoute' => designerSaveRouteFromBackend,
+                                                    'uploadRoute' => designerUploadRouteFromBackend,
+                                                    'name' => 'designerName',
+                                                    'id' => designerId,
+                                                    'background' => designerSavedImageFromBackend,
+                                                ])
+                                                </code>
+                                            </pre>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -176,14 +206,12 @@
                 <div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
                     <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
                         <div class="text-dark order-2 order-md-1">
-                            <span class="text-muted font-weight-bold mr-2">2021©</span>
-                            <a href="#" target="_blank"
-                                class="text-dark-75 text-hover-primary">Keenthemes</a>
+                            <span class="text-muted font-weight-bold mr-2">2024©Mai</span>
+
                         </div>
                     
                         <div class="nav nav-dark">
-                            <a href="index.html" target="_blank"
-                                class="nav-link pl-0 pr-5">Home</a>
+                         
                         </div>
                     </div>
                 </div>
@@ -197,3 +225,4 @@
     <script src="assets/js/scripts.bundle.js"></script>
 </body>
 </html>
+
