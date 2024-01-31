@@ -201,6 +201,7 @@
                                                 <span class="menu-text">Ajax</span>
                                             </a>
                                         </li>
+
                                         <li class="menu-item" aria-haspopup="true">
                                             <a href="custom/pages/methods/PopUp.html" class="menu-link">
                                                 <i class="menu-bullet menu-bullet-dot">
@@ -218,7 +219,6 @@
                                                 <span class="menu-text">Swal (Confirmation Message)</span>
                                             </a>
                                         </li>
-
                                     </ul>
                                 </div>
                             </li>
@@ -285,13 +285,13 @@
                                         </span>
                                     </div>
                                     <div class="alert-text">
-                                        Example
-                                                        Of <code>AJAX </code> that allows web pages to be updated
-                                                        asynchronously by exchanging data with a web server behind the
-                                                        scenes. This means that it is possible to update parts of a web
-                                                        page, without reloading the whole page.
+                                        <code>Pop Up</code>Is A small window that is displayed on top of the existing
+                                        windows on screen. A popup window can be used in any application to display new
+                                        information;
                                     </div>
                                 </div>
+
+
 
                                 <div class="card card-custom mt-5">
                                     <div class="card-body p-5">
@@ -318,7 +318,7 @@
                                                         </span>
                                                     </div>
                                                     <div class="alert-text">
-                                                        <code>sendAjax</code>
+                                                        <code>showPopUp</code>
                                                         Method Build In Project
                                                     </div>
                                                 </div>
@@ -329,102 +329,9 @@
                                                     class="example-nav nav nav-tabs nav-bold nav-tabs-line nav-tabs-line-2x">
                                                     <li class="nav-item">
                                                         <a class="nav-link active" data-toggle="tab"
-                                                            href="#example_code_3_js">JS</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                    <a class="nav-link " data-toggle="tab"
-                                                        href="#example_code_3_html">HTML</a>
-                                                    </li>
-
-                                                </ul>
-                                                <span class="example-copy" data-toggle="tooltip"
-                                                    title="Copy code"></span>
-                                                <div class="tab-content">
-
-                                                    <div class="tab-pane active" id="example_code_3_js">
-                                                        <div class="example-highlight">
-                                                            <pre>
-<code class="language-js">
-    $(document).on('submit', "#form-name", function(e) {
-        e.preventDefault();
-        var form = $(this);
-        var url = form.attr('action');
-        let data = form.serialize();
-        let method = form.attr('method');
-        sendAjax(url, data, method, (res) => callbackFn());
-    })
-
-    function callbackFn() {
-        //code Here
-    }
-</code>
-</pre>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tab-pane" id="example_code_3_html" role="tabpanel">
-                                                        <div class="example-highlight">
-                                                            <pre><code class="language-html">
-                                                            &lt;form id=&quot;form-name&quot; action=&quot;{{ route('route from backend') }}&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;
-                                                                @csrf
-                                                                &lt;div class=&quot;row&quot;&gt;
-                                                                    &lt;div class=&quot;col-md-12 mb-4&quot;&gt;
-                                                                        &lt;label for=&quot;title&quot;&gt;title&lt;/label&gt;
-                                                                        &lt;input type=&quot;text&quot; name=&quot;title&quot; class=&quot;form-control&quot;&gt;
-                                                                    &lt;/div&gt;
-                                                                &lt;/div&gt;
-                                                            &lt;/form&gt;
-                                                            </code></pre>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card card-custom mt-5">
-                                    <div class="card-body p-5">
-
-                                        <div class="example mb-10">
-                                            <div class="form-group mb-8">
-                                                <div class="alert alert-custom alert-default" role="alert">
-                                                    <div class="alert-icon">
-                                                        <span class="svg-icon svg-icon-primary svg-icon-xl">
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                                                height="24px" viewBox="0 0 24 24" version="1.1">
-                                                                <g stroke="none" stroke-width="1" fill="none"
-                                                                    fill-rule="evenodd">
-                                                                    <rect x="0" y="0" width="24" height="24"></rect>
-                                                                    <path
-                                                                        d="M7.07744993,12.3040451 C7.72444571,13.0716094 8.54044565,13.6920474 9.46808594,14.1079953 L5,23 L4.5,18 L7.07744993,12.3040451 Z M14.5865511,14.2597864 C15.5319561,13.9019016 16.375416,13.3366121 17.0614026,12.6194459 L19.5,18 L19,23 L14.5865511,14.2597864 Z M12,3.55271368e-14 C12.8284271,3.53749572e-14 13.5,0.671572875 13.5,1.5 L13.5,4 L10.5,4 L10.5,1.5 C10.5,0.671572875 11.1715729,3.56793164e-14 12,3.55271368e-14 Z"
-                                                                        fill="#000000" opacity="0.3"></path>
-                                                                    <path
-                                                                        d="M12,10 C13.1045695,10 14,9.1045695 14,8 C14,6.8954305 13.1045695,6 12,6 C10.8954305,6 10,6.8954305 10,8 C10,9.1045695 10.8954305,10 12,10 Z M12,13 C9.23857625,13 7,10.7614237 7,8 C7,5.23857625 9.23857625,3 12,3 C14.7614237,3 17,5.23857625 17,8 C17,10.7614237 14.7614237,13 12,13 Z"
-                                                                        fill="#000000" fill-rule="nonzero"></path>
-                                                                </g>
-                                                            </svg>
-                                                        </span>
-                                                    </div>
-                                                    <div class="alert-text">
-                                                        Another Way To send <code>AJAX </code>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="example-code">
-                                                <ul class="example-nav nav nav-tabs nav-bold nav-tabs-line nav-tabs-line-2x">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link active" data-toggle="tab"
                                                             href="#example_code_4_js">JS</a>
                                                     </li>
-                                                    <li class="nav-item">
-                                                    <a class="nav-link " data-toggle="tab"
-                                                        href="#example_code_4_html">HTML</a>
-                                                    </li>
+
 
                                                 </ul>
                                                 <span class="example-copy" data-toggle="tooltip"
@@ -435,28 +342,12 @@
                                                         <div class="example-highlight">
                                                             <pre>
 <code class="language-js">
-    ajaxFormSubmitter($("#form-name"), () => {
-       // code for callback Fn 
-    }, true);
+    showPopUp("write message here", "warning")
 </code>
 </pre>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-pane" id="example_code_4_html">
-                                                        <div class="example-highlight">
-                                                            <pre><code class="language-html">
-                                                            &lt;form id=&quot;form-name&quot; action=&quot;{{ route('route from backend') }}&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;
-                                                                @csrf
-                                                                &lt;div class=&quot;row&quot;&gt;
-                                                                    &lt;div class=&quot;col-md-12 mb-4&quot;&gt;
-                                                                        &lt;label for=&quot;title&quot;&gt;title&lt;/label&gt;
-                                                                        &lt;input type=&quot;text&quot; name=&quot;title&quot; class=&quot;form-control&quot;&gt;
-                                                                    &lt;/div&gt;
-                                                                &lt;/div&gt;
-                                                            &lt;/form&gt;
-                                                            </code></pre>
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
 
@@ -470,7 +361,8 @@
                                                         <svg xmlns="http://www.w3.org/2000/svg"
                                                             xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                             height="24px" viewBox="0 0 24 24" version="1.1">
-                                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g stroke="none" stroke-width="1" fill="none"
+                                                                fill-rule="evenodd">
                                                                 <rect x="0" y="0" width="24" height="24"></rect>
                                                                 <path
                                                                     d="M7.07744993,12.3040451 C7.72444571,13.0716094 8.54044565,13.6920474 9.46808594,14.1079953 L5,23 L4.5,18 L7.07744993,12.3040451 Z M14.5865511,14.2597864 C15.5319561,13.9019016 16.375416,13.3366121 17.0614026,12.6194459 L19.5,18 L19,23 L14.5865511,14.2597864 Z M12,3.55271368e-14 C12.8284271,3.53749572e-14 13.5,0.671572875 13.5,1.5 L13.5,4 L10.5,4 L10.5,1.5 C10.5,0.671572875 11.1715729,3.56793164e-14 12,3.55271368e-14 Z"
@@ -484,17 +376,18 @@
                                                 </div>
                                                 <div class="alert-text">
                                                     <span class="text-warning">Note</span><br />
-                                                    ajaxFormSubmitter function contain <br/> 
-                                                    First attribute<code>Form Name</code> <br />
-                                                    Second attribute<code>callback function execute when ajax send</code> <br />
-                                                    Third attribute<code>boolean value if true show popup and if false not show popup when ajax send successfully</code> <br />
+                                                    showPopUp function contain <br />
+                                                    First attribute<code>Message</code> <br />
+                                                    Second
+                                                    attribute<code>Status Of Message may by danger or warning or success</code>
+                                                    <br />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                            
+
                             </div>
                         </div>
                     </div>
@@ -528,6 +421,3 @@
 </body>
 
 </html>
-
-
-
