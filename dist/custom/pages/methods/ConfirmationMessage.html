@@ -354,8 +354,14 @@
                                                         <div class="example-highlight">
                                                             <pre>
 <code class="language-js">
-    showCofirmationMassage('write message here', () => {
-         //code here 
+    let content = {
+        title: 'title',
+        text: 'confirmation message',
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+    }
+    showCofirmationMassage(content, () => {
+         //code here when user confirm
     });
 </code>
 </pre>
